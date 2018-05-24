@@ -1,0 +1,258 @@
+
+Public Sub Pricing_Print()
+Sheet1.Range("Pricing_Print").PrintPreview
+End Sub
+Public Sub Lease_Print()
+Sheet1.Range("Lease_Print").PrintPreview
+End Sub
+Public Sub Debt_Print()
+Sheet1.Range("Debt_Print").PrintPreview
+End Sub
+Public Sub Sensi_Print()
+Sheet1.Range("Sensi_Print1").PrintPreview
+End Sub
+Public Sub Prop_Summ_Print()
+Sheet1.Range("Property_Summ_Print").PrintPreview
+End Sub
+Public Sub Comp_Print()
+Sheet1.Range("Comparison_Print").PrintPreview
+End Sub
+
+'SPIN RATES BUTTON
+
+Private Sub SpinButton6_Change()
+If SpinButton6.Value = 1 Then
+Range("Rental_Growth") = Range("Rental_Growth") + 0.001
+ElseIf SpinButton6.Value = -1 Then
+Range("Rental_Growth") = Range("Rental_Growth") - 0.001
+End If
+SpinButton6.Value = 0
+End Sub
+
+Public Sub Property_GCF()
+Sheet7.Range("Prop_GCF").EntireColumn.Hidden = False
+Sheet7.Range("Unit_GCF").EntireColumn.Hidden = True
+Sheet7.Range("Unit_GCF0").EntireColumn.Hidden = True
+Sheet7.Range("Unit_GCF100").EntireColumn.Hidden = True
+Sheet7.Range("A1").Activate
+End Sub
+Public Sub Unit_GCF()
+Sheet7.Range("Prop_GCF").EntireColumn.Hidden = True
+Sheet7.Range("Unit_GCF").EntireColumn.Hidden = False
+Sheet7.Range("Unit_GCF0").EntireColumn.Hidden = True
+Sheet7.Range("Unit_GCF100").EntireColumn.Hidden = True
+Sheet7.Range("A1").Activate
+End Sub
+Public Sub Unit_GCF0()
+Sheet7.Range("Prop_GCF").EntireColumn.Hidden = True
+Sheet7.Range("Unit_GCF").EntireColumn.Hidden = True
+Sheet7.Range("Unit_GCF0").EntireColumn.Hidden = False
+Sheet7.Range("Unit_GCF100").EntireColumn.Hidden = True
+Sheet7.Range("A1").Activate
+End Sub
+Public Sub Unit_GCF100()
+Sheet7.Range("Prop_GCF").EntireColumn.Hidden = True
+Sheet7.Range("Unit_GCF").EntireColumn.Hidden = True
+Sheet7.Range("Unit_GCF0").EntireColumn.Hidden = True
+Sheet7.Range("Unit_GCF100").EntireColumn.Hidden = False
+Sheet7.Range("A1").Activate
+End Sub
+Public Sub Property_SCF()
+Sheet13.Range("Prop_SCF").EntireColumn.Hidden = False
+Sheet13.Range("Unit_SCF").EntireColumn.Hidden = True
+Sheet13.Range("Unit_SCF0").EntireColumn.Hidden = True
+Sheet13.Range("Unit_SCF100").EntireColumn.Hidden = True
+Sheet13.Range("Service_CC").EntireColumn.Hidden = True
+Sheet13.Range("A1").Activate
+End Sub
+Public Sub Unit_SCF()
+Sheet13.Range("Prop_SCF").EntireColumn.Hidden = True
+Sheet13.Range("Unit_SCF").EntireColumn.Hidden = False
+Sheet13.Range("Unit_SCF0").EntireColumn.Hidden = True
+Sheet13.Range("Unit_SCF100").EntireColumn.Hidden = True
+Sheet13.Range("Service_CC").EntireColumn.Hidden = True
+Sheet13.Range("A1").Activate
+End Sub
+Public Sub Unit_SCF0()
+Sheet13.Range("Prop_SCF").EntireColumn.Hidden = True
+Sheet13.Range("Unit_SCF").EntireColumn.Hidden = True
+Sheet13.Range("Unit_SCF0").EntireColumn.Hidden = False
+Sheet13.Range("Service_CC").EntireColumn.Hidden = True
+Sheet13.Range("Unit_SCF100").EntireColumn.Hidden = True
+Sheet13.Range("A1").Activate
+End Sub
+Public Sub Unit_GCS100()
+Sheet13.Range("Prop_SCF").EntireColumn.Hidden = True
+Sheet13.Range("Unit_SCF").EntireColumn.Hidden = True
+Sheet13.Range("Unit_SCF0").EntireColumn.Hidden = True
+Sheet13.Range("Service_CC").EntireColumn.Hidden = True
+Sheet13.Range("Unit_SCF100").EntireColumn.Hidden = False
+Sheet13.Range("A1").Activate
+End Sub
+Public Sub Service_CC()
+Sheet13.Range("Prop_SCF").EntireColumn.Hidden = True
+Sheet13.Range("Unit_SCF").EntireColumn.Hidden = True
+Sheet13.Range("Unit_SCF0").EntireColumn.Hidden = True
+Sheet13.Range("Unit_SCF100").EntireColumn.Hidden = True
+Sheet13.Range("Service_CC").EntireColumn.Hidden = False
+Sheet13.Range("A1").Activate
+End Sub
+
+Public Sub Property_TI()
+Sheet8.Range("Prop_TI").EntireColumn.Hidden = False
+Sheet8.Range("Unit_TI").EntireColumn.Hidden = True
+Sheet8.Range("Unit_TI0").EntireColumn.Hidden = True
+Sheet8.Range("Unit_TI100").EntireColumn.Hidden = True
+Sheet8.Range("A1").Activate
+End Sub
+Public Sub Unit_TI()
+Sheet8.Range("Prop_TI").EntireColumn.Hidden = True
+Sheet8.Range("Unit_TI").EntireColumn.Hidden = False
+Sheet8.Range("Unit_TI0").EntireColumn.Hidden = True
+Sheet8.Range("Unit_TI100").EntireColumn.Hidden = True
+Sheet8.Range("A1").Activate
+End Sub
+Public Sub Unit_TI0()
+Sheet8.Range("Prop_TI").EntireColumn.Hidden = True
+Sheet8.Range("Unit_TI").EntireColumn.Hidden = True
+Sheet8.Range("Unit_TI0").EntireColumn.Hidden = False
+Sheet8.Range("Unit_TI100").EntireColumn.Hidden = True
+Sheet8.Range("A1").Activate
+End Sub
+Public Sub Unit_TI100()
+Sheet8.Range("Prop_TI").EntireColumn.Hidden = True
+Sheet8.Range("Unit_TI").EntireColumn.Hidden = True
+Sheet8.Range("Unit_TI0").EntireColumn.Hidden = True
+Sheet8.Range("Unit_TI100").EntireColumn.Hidden = False
+Sheet8.Range("A1").Activate
+End Sub
+Public Sub Property_LC()
+Sheet9.Range("Prop_LC").EntireColumn.Hidden = False
+Sheet9.Range("Unit_LC").EntireColumn.Hidden = True
+Sheet9.Range("A1").Activate
+End Sub
+Public Sub Property_LC1()
+Sheet15.Range("Prop_LC1").EntireColumn.Hidden = False
+Sheet15.Range("Unit_LC1").EntireColumn.Hidden = True
+Sheet15.Range("A1").Activate
+End Sub
+Public Sub Unit_LC()
+Sheet9.Range("Prop_LC").EntireColumn.Hidden = True
+Sheet9.Range("Unit_LC").EntireColumn.Hidden = False
+Sheet9.Range("A1").Activate
+End Sub
+Public Sub Unit_LC1()
+Sheet15.Range("Prop_LC1").EntireColumn.Hidden = True
+Sheet15.Range("Unit_LC1").EntireColumn.Hidden = False
+Sheet15.Range("A1").Activate
+End Sub
+Public Sub Property_Void()
+Sheet10.Range("Prop_Void").EntireColumn.Hidden = False
+Sheet10.Range("Unit_Void").EntireColumn.Hidden = True
+Sheet10.Range("Prop_Void1").EntireColumn.Hidden = True
+Sheet10.Range("A1").Activate
+End Sub
+Public Sub Unit_Void()
+Sheet10.Range("Prop_Void").EntireColumn.Hidden = True
+Sheet10.Range("Unit_Void").EntireColumn.Hidden = False
+Sheet10.Range("Prop_Void1").EntireColumn.Hidden = True
+Sheet10.Range("A1").Activate
+End Sub
+Public Sub Property_Void_Ad()
+Sheet10.Range("Prop_Void1").EntireColumn.Hidden = False
+Sheet10.Range("Unit_Void").EntireColumn.Hidden = True
+Sheet10.Range("Prop_Void").EntireColumn.Hidden = True
+Sheet10.Range("A1").Activate
+End Sub
+Public Sub Macro()
+Sheet2.Range("Macro").EntireColumn.Hidden = False
+Sheet2.Range("Unit").EntireColumn.Hidden = True
+Sheet2.Range("Exit").EntireColumn.Hidden = True
+Sheet2.Range("Property").EntireColumn.Hidden = True
+Sheet2.Range("A1").Activate
+End Sub
+Public Sub Unit()
+Sheet2.Range("Macro").EntireColumn.Hidden = True
+Sheet2.Range("Unit").EntireColumn.Hidden = False
+Sheet2.Range("Exit").EntireColumn.Hidden = True
+Sheet2.Range("Property").EntireColumn.Hidden = True
+Sheet2.Range("A1").Activate
+End Sub
+Public Sub Exit_Assumptions()
+Sheet2.Range("Macro").EntireColumn.Hidden = True
+Sheet2.Range("Unit").EntireColumn.Hidden = True
+Sheet2.Range("Exit").EntireColumn.Hidden = False
+Sheet2.Range("Property").EntireColumn.Hidden = True
+Sheet2.Range("A1").Activate
+End Sub
+Public Sub Property_Assumptions()
+Sheet2.Range("Macro").EntireColumn.Hidden = True
+Sheet2.Range("Unit").EntireColumn.Hidden = True
+Sheet2.Range("Exit").EntireColumn.Hidden = True
+Sheet2.Range("Property").EntireColumn.Hidden = False
+Sheet2.Range("A1").Activate
+End Sub
+
+Public Sub Pricing()
+Sheet1.Range("Pricing").EntireColumn.Hidden = False
+Sheet1.Range("Lease").EntireColumn.Hidden = True
+Sheet1.Range("Debt").EntireColumn.Hidden = True
+Sheet1.Range("Sensi").EntireColumn.Hidden = True
+Sheet1.Range("Tables").EntireColumn.Hidden = True
+Sheet1.Range("Property_sum").EntireColumn.Hidden = True
+Sheet1.Range("A1").Activate
+End Sub
+Public Sub Lease()
+Sheet1.Range("Pricing").EntireColumn.Hidden = True
+Sheet1.Range("Lease").EntireColumn.Hidden = False
+Sheet1.Range("Debt").EntireColumn.Hidden = True
+Sheet1.Range("Sensi").EntireColumn.Hidden = True
+Sheet1.Range("Tables").EntireColumn.Hidden = True
+Sheet1.Range("Property_sum").EntireColumn.Hidden = True
+Sheet1.Range("A1").Activate
+End Sub
+Public Sub Debt()
+Sheet1.Range("Pricing").EntireColumn.Hidden = True
+Sheet1.Range("Lease").EntireColumn.Hidden = True
+Sheet1.Range("Debt").EntireColumn.Hidden = False
+Sheet1.Range("Sensi").EntireColumn.Hidden = True
+Sheet1.Range("Tables").EntireColumn.Hidden = True
+Sheet1.Range("Property_sum").EntireColumn.Hidden = True
+Sheet1.Range("A1").Activate
+End Sub
+Public Sub Sensi()
+Sheet1.Range("Pricing").EntireColumn.Hidden = True
+Sheet1.Range("Lease").EntireColumn.Hidden = True
+Sheet1.Range("Debt").EntireColumn.Hidden = True
+Sheet1.Range("Sensi").EntireColumn.Hidden = False
+Sheet1.Range("Tables").EntireColumn.Hidden = False
+Sheet1.Range("Property_sum").EntireColumn.Hidden = True
+Sheet1.Range("A1").Activate
+End Sub
+Public Sub Prop_Sum()
+Sheet1.Range("Pricing").EntireColumn.Hidden = True
+Sheet1.Range("Lease").EntireColumn.Hidden = True
+Sheet1.Range("Debt").EntireColumn.Hidden = True
+Sheet1.Range("Sensi").EntireColumn.Hidden = True
+Sheet1.Range("Tables").EntireColumn.Hidden = True
+Sheet1.Range("Property_sum").EntireColumn.Hidden = False
+Sheet1.Range("A1").Activate
+End Sub
+Public Sub Pr_Occ()
+Sheet17.Range("Pr_Occ1").EntireColumn.Hidden = True
+Sheet17.Range("Pr_Occ").EntireColumn.Hidden = False
+Sheet17.Range("Un_Occ").EntireColumn.Hidden = True
+Sheet17.Range("A1").Activate
+End Sub
+Public Sub Pr_Occ_adj()
+Sheet17.Range("Pr_Occ").EntireColumn.Hidden = True
+Sheet17.Range("Pr_Occ1").EntireColumn.Hidden = False
+Sheet17.Range("Un_Occ").EntireColumn.Hidden = True
+Sheet17.Range("A1").Activate
+End Sub
+Public Sub Un_Occ()
+Sheet17.Range("Pr_Occ").EntireColumn.Hidden = True
+Sheet17.Range("Pr_Occ1").EntireColumn.Hidden = True
+Sheet17.Range("Un_Occ").EntireColumn.Hidden = False
+Sheet17.Range("A1").Activate
+End Sub
