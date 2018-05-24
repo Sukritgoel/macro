@@ -1,0 +1,40 @@
+Sub SheetName()
+
+Dim ws As Worksheet
+
+Dim i As Integer
+
+Dim LinkCellRange As Range
+
+Dim str1 As String, str2 As String
+
+''' Dim clearrange As Range
+
+''' Worksheets("Help").Range(Range(SheetName_MacroStart) & ":" & Range(SheetName_MacroStart).Cells(110, 1)).ClearContents
+
+Worksheets("Help").Range(Cells(8, 3), Cells(100, 3)).ClearContents
+
+
+i = 0
+
+For Each ws In ThisWorkbook.Worksheets
+
+
+i = i + 1
+
+
+''' Worksheets("Help").Range("SheetName_MacroStart").Cells(i + 1, 1) = ws.Name
+
+str1 = "'" & ws.Name & "'!A1"
+
+str2 = ws.Name
+
+Worksheets("Help").Hyperlinks.Add Anchor:=Worksheets("Help").Range("SheetName_MacroStart").Cells(i + 1, 1), Address:="", SubAddress:=str1, TextToDisplay:=str2
+
+Next ws
+
+Worksheets("Help").Range("Help_DateTimeStamp").Cells(1, 1) = Now
+
+End Sub
+
+
